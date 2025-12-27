@@ -141,45 +141,45 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const Router = <span class="cstat-no" title="statement not covered" >require("koa-router");</span>
-const projects = <span class="cstat-no" title="statement not covered" >require("../../projects/project.handler");</span>
-const authGuard = <span class="cstat-no" title="statement not covered" >require("../middlewares/auth.guard");</span>
-const roleGuard = <span class="cstat-no" title="statement not covered" >require("../middlewares/role.guard");</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const Router = <span class="cstat-no" title="statement not covered" >require('koa-router')</span>
+const projects = <span class="cstat-no" title="statement not covered" >require('../../projects/project.handler')</span>
+const authGuard = <span class="cstat-no" title="statement not covered" >require('../middlewares/auth.guard')</span>
+const roleGuard = <span class="cstat-no" title="statement not covered" >require('../middlewares/role.guard')</span>
 &nbsp;
-const router = <span class="cstat-no" title="statement not covered" >new Router({ prefix: "/api/v1/projects" });</span>
+const router = <span class="cstat-no" title="statement not covered" >new Router({ prefix: '/api/v1/projects' })</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >router.use(authGuard);</span>
+<span class="cstat-no" title="statement not covered" >router.use(authGuard)</span>
 &nbsp;
 // CREATE
-<span class="cstat-no" title="statement not covered" >router.post("/", roleGuard("OWNER"), <span class="fstat-no" title="function not covered" >as</span>ync ctx =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  ctx.body = await projects.create(ctx.state.user, ctx.request.body);</span>
-});
+<span class="cstat-no" title="statement not covered" >router.post('/', roleGuard('OWNER'), <span class="fstat-no" title="function not covered" >as</span>ync ctx =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  ctx.body = await projects.create(ctx.state.user, ctx.request.body)</span>
+})
 &nbsp;
 // LIST
-<span class="cstat-no" title="statement not covered" >router.get("/", <span class="fstat-no" title="function not covered" >as</span>ync ctx =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  ctx.body = await projects.list(ctx.state.user);</span>
-});
+<span class="cstat-no" title="statement not covered" >router.get('/', <span class="fstat-no" title="function not covered" >as</span>ync ctx =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  ctx.body = await projects.list(ctx.state.user)</span>
+})
 &nbsp;
 // GET ONE
-<span class="cstat-no" title="statement not covered" >router.get("/:id", <span class="fstat-no" title="function not covered" >as</span>ync ctx =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  ctx.body = await projects.getById(ctx.state.user, ctx.params.id);</span>
-});
+<span class="cstat-no" title="statement not covered" >router.get('/:id', <span class="fstat-no" title="function not covered" >as</span>ync ctx =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  ctx.body = await projects.getById(ctx.state.user, ctx.params.id)</span>
+})
 &nbsp;
 // UPDATE
-<span class="cstat-no" title="statement not covered" >router.put("/:id", <span class="fstat-no" title="function not covered" >as</span>ync ctx =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >router.put('/:id', <span class="fstat-no" title="function not covered" >as</span>ync ctx =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  ctx.body = await projects.update(</span>
     ctx.state.user,
     ctx.params.id,
     ctx.request.body
-  );
-});
+  )
+})
 &nbsp;
 // DELETE
-<span class="cstat-no" title="statement not covered" >router.delete("/:id", <span class="fstat-no" title="function not covered" >as</span>ync ctx =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  ctx.body = await projects.remove(ctx.state.user, ctx.params.id);</span>
-});
+<span class="cstat-no" title="statement not covered" >router.delete('/:id', <span class="fstat-no" title="function not covered" >as</span>ync ctx =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  ctx.body = await projects.remove(ctx.state.user, ctx.params.id)</span>
+})
 &nbsp;
-<span class="cstat-no" title="statement not covered" >module.exports = router;</span>
+<span class="cstat-no" title="statement not covered" >module.exports = router</span>
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -187,7 +187,7 @@ const router = <span class="cstat-no" title="statement not covered" >new Router(
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-12-27T07:08:09.899Z
+                at 2025-12-27T07:39:50.691Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

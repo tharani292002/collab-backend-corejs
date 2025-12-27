@@ -1,5 +1,5 @@
 module.exports = (user, role) => {
   if (user.role !== role) {
-    throw new Error("Forbidden");
+    throw new Error('Forbidden')
   }
-};
+}

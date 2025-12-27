@@ -1,27 +1,27 @@
-jest.mock("../config/mongo");
+jest.mock('../config/mongo')
 
-const mongoConnect = require("../config/mongo");
-const authService = require("../auth/auth.handler");
+const mongoConnect = require('../config/mongo')
+const authService = require('../auth/auth.handler')
 
-describe("Authentication Service", () => {
+describe('Authentication Service', () => {
   beforeEach(() => {
-    mongoConnect.mockClear();
-  });
+    mongoConnect.mockClear()
+  })
 
-  test("AUTH-01: Login with valid credentials", async () => {
+  test('AUTH-01: Login with valid credentials', async () => {
     mongoConnect.mockResolvedValue({
       collection: () => ({
         findOne: jest.fn().mockResolvedValue({
-          email: "test@test.com",
-          password: "hashedPassword",
-        }),
-      }),
-    });
+          email: 'test@test.com',
+          password: 'hashedPassword'
+        })
+      })
+    })
 
     const result = await authService.login({
-      userId: "testDev1",
-      role: "OWNER"
-    });
-    expect(result.error).toEqual("Invalid credentials");
-  });
-});
+      userId: 'testDev1',
+      role: 'OWNER'
+    })
+    expect(result.error).toEqual('Invalid credentials')
+  })
+})

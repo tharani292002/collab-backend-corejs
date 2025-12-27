@@ -6,12 +6,13 @@
     "start": "node src/server.js",
     "worker": "node src/jobs/job.worker.js",
     "test": "npx jest --forceExit --detectOpenHandles --coverage",
-    "lint": "echo \"Lint skipped\""
+    "lint": "eslint . --fix"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
     "bullmq": "^5.7.0",
     "dotenv": "8.2.0",
+    "eslint": "8.56.0",
     "@hapi/joi": "15.1.1",
     "jsonwebtoken": "^9.0.2",
     "jest": "30.2.0",
@@ -23,5 +24,17 @@
     "redis": "^4.6.13",
     "socket.io": "^4.7.5",
     "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint": "8.56.0",
+    "eslint-config-standard": "17.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jest": "27.6.3",
+    "eslint-plugin-n": "16.6.2",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "6.1.1",
+    "jest": "30.2.0",
+    "json-server": "0.17.4",
+    "supertest": "6.3.4"
   }
 }

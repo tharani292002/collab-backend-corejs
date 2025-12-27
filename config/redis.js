@@ -1,6 +1,6 @@
-const { createClient } = require("redis");
+const { createClient } = require('redis')
 
-const client = createClient({ url: process.env.REDIS_URL });
-client.connect();
+const client = createClient({ url: process.env.REDIS_URL })
+client.connect()
 
-module.exports = client;
+module.exports = client

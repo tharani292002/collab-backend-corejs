@@ -1,17 +1,17 @@
-const { MongoClient } = require('mongodb');
+const { MongoClient } = require('mongodb')
 
-let db;
+let db
 
-async function connect() {
-  if (db) return db;
+async function connect () {
+  if (db) return db
 
   if (!process.env.MONGODB_URI) {
-    throw new Error('MONGODB_URI not set');
+    throw new Error('MONGODB_URI not set')
   }
 
-  const client = await MongoClient.connect(process.env.MONGODB_URI);
-  db = client.db('collab');
-  return db;
+  const client = await MongoClient.connect(process.env.MONGODB_URI)
+  db = client.db('collab')
+  return db
 }
 
-module.exports = connect;
+module.exports = connect

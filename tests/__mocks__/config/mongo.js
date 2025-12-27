@@ -1,3 +1,3 @@
-const connect = jest.fn();
+const connect = jest.fn()
 
-module.exports = connect;
+module.exports = connect

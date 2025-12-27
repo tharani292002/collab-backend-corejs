@@ -1,15 +1,15 @@
-function userJoined({ userId, workspaceId }) {
+function userJoined ({ userId, workspaceId }) {
   return {
     type: 'USER_JOINED',
-    payload: { userId, workspaceId },
-  };
+    payload: { userId, workspaceId }
+  }
 }
 
-function fileChanged({ file, content }) {
+function fileChanged ({ file, content }) {
   return {
     type: 'FILE_CHANGED',
-    payload: { file, content },
-  };
+    payload: { file, content }
+  }
 }
 
-module.exports = { userJoined, fileChanged };
+module.exports = { userJoined, fileChanged }
