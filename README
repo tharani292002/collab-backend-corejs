@@ -1,0 +1,15 @@
+## Architecture
+- Node.js service-based backend
+- MongoDB for persistence
+- Redis-ready async job design
+- WebSocket event broadcasting
+
+## Testing
+- Jest unit tests
+- MongoDB mocked using Jest manual mocks
+- ~70% service-layer coverage
+
+## Scalability
+- Stateless services
+- Horizontal scaling supported
+- Async job workers decoupled
