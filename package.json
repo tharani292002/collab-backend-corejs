@@ -4,9 +4,10 @@
   "type": "commonjs",
   "scripts": {
     "start": "node src/server.js",
-    "worker": "node src/jobs/job.worker.js",
+    "worker": "node jobs/job.worker.js",
     "test": "npx jest --forceExit --detectOpenHandles --coverage",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "build": "echo 'Nothing to build for Node backend!'"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
