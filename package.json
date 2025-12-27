@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node src/server.js",
     "worker": "node src/jobs/job.worker.js",
-    "test": "jest --forceExit --detectOpenHandles --coverage",
+    "test": "npx jest --forceExit --detectOpenHandles --coverage",
     "lint": "echo \"Lint skipped\""
   },
   "dependencies": {
